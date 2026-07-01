@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kian López Ruiz — Full Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Cursor glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Barra de "editor" superior -->
+<header class="editor-bar">
+  <div class="traffic-lights">
+    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+  </div>
+  <nav class="tabs">
+    <a href="#inicio" class="tab active" data-tab>inicio.jsx</a>
+    <a href="#sobre-mi" class="tab" data-tab>sobre-mi.md</a>
+    <a href="#stack" class="tab" data-tab>stack.json</a>
+    <a href="#proyectos" class="tab" data-tab>proyectos.js</a>
+    <a href="#contacto" class="tab" data-tab>contacto.sh</a>
+  </nav>
+</header>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<main>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="line-number-label reveal"><span class="line-no"></span> Bienvenido a mi portafolio</p>
+        <div class="code-block reveal">
+<pre><code><span class="kw">const</span> <span class="var">developer</span> <span class="op">=</span> {
+  <span class="prop">nombre</span>: <span class="str">"Kian López Ruiz"</span>,
+  <span class="prop">edad</span>: <span class="num">21</span>,
+  <span class="prop">rol</span>: <span class="str" id="typedRole"></span><span class="typed-cursor">|</span>,
+  <span class="prop">stack</span>: [<span class="str">"JS"</span>, <span class="str">"Java"</span>, <span class="str">"Kotlin"</span>, <span class="str">"C++"</span>]
+};</code></pre>
+        </div>
+        <p class="hero-sub reveal">Construyo software desde el backend hasta la interfaz — con foco en datos, tiempo real y buenas experiencias de uso.</p>
+        <div class="hero-actions reveal">
+          <a href="#proyectos" class="btn btn-primary">Ver proyectos <span class="arrow">→</span></a>
+          <a href="#contacto" class="btn btn-ghost">Contactarme</a>
+        </div>
+      </div>
+      <div class="hero-photo reveal">
+        <div class="photo-frame">
+          <img src="assets/foto.jpg" alt="Foto de Kian López Ruiz">
+          <div class="frame-tag">~/kian.jpg</div>
+        </div>
+        <div class="status-chip">
+          <span class="pulse-dot"></span> disponible para proyectos
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint reveal">scroll <span class="chev">⌄</span></div>
+  </section>
+
+  <!-- SOBRE MI -->
+  <section id="sobre-mi" class="section">
+    <p class="eyebrow reveal"><span class="line-no"></span> sobre-mi.md</p>
+    <h2 class="section-title reveal">Quién soy</h2>
+    <div class="about-grid">
+      <p class="about-text reveal">
+        Soy <strong>Kian López Ruiz</strong>, desarrollador de software de 21 años me gusta construir productos completos
+        desde el modelado de datos y la lógica del backend, hasta la interfaz que finalmente usa la gente he trabajado en
+        proyectos que van desde control de ganado bovino hasta plataformas de mentorías en tiempo real, siempre buscando
+        resolver un problema real con la tecnología correcta para cada caso.
+      </p>
+      <div class="lang-card reveal">
+        <p class="lang-title"> idiomas</p>
+        <div class="lang-row">
+          <span>Español</span>
+          <div class="lang-bar"><div class="lang-fill" style="--w:100%"></div></div>
+          <span class="lang-level">Nativo</span>
+        </div>
+        <div class="lang-row">
+          <span>Inglés</span>
+          <div class="lang-bar"><div class="lang-fill" style="--w:35%"></div></div>
+          <span class="lang-level">Básico</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack" class="section">
+    <p class="eyebrow reveal"><span class="line-no"></span> stack.json</p>
+    <h2 class="section-title reveal">Tecnologías</h2>
+    <div class="stack-grid">
+      <div class="stack-card reveal">
+        <h3>Frontend</h3>
+        <div class="chip-row">
+          <span class="chip">JavaScript</span><span class="chip">React</span><span class="chip">HTML</span>
+          <span class="chip">CSS</span><span class="chip">Tailwind</span><span class="chip">Figma</span>
+        </div>
+      </div>
+      <div class="stack-card reveal">
+        <h3>Backend</h3>
+        <div class="chip-row">
+          <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Java</span>
+          <span class="chip">Javalin</span><span class="chip">Kotlin</span><span class="chip">C++</span>
+        </div>
+      </div>
+      <div class="stack-card reveal">
+        <h3>Bases de datos</h3>
+        <div class="chip-row">
+          <span class="chip">MySQL</span><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="section">
+    <p class="eyebrow reveal"><span class="line-no"></span> proyectos.js</p>
+    <h2 class="section-title reveal">Proyectos</h2>
+
+    <div class="projects-list">
+
+      <article class="project-card reveal">
+        <div class="project-index">01</div>
+        <div class="project-body">
+          <h3>Agrosystem</h3>
+          <p class="project-role">Control y monitoreo de ganado bovino</p>
+          <p class="project-desc">Software que ayuda con el control de ganado bovino: monitorea y funciona como un registro
+            centralizado de información de los animales, pensado para llevar un seguimiento claro del hato.</p>
+          <div class="chip-row small">
+            <span class="chip">React</span><span class="chip">JavaScript</span><span class="chip">Tailwind</span>
+          </div>
+          <a href="https://github.com/lopezruizkian-pixel/finally-repository-agrosystem-front" target="_blank" rel="noopener" class="project-link">Ver repositorio <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-index">02</div>
+        <div class="project-body">
+          <h3>Locus</h3>
+          <p class="project-role">Guía turística con desbloqueo por ubicación</p>
+          <p class="project-desc">Aplicación web que funciona como guía turística: registra locaciones en una base de datos
+            y hace que el usuario "desbloquee" cada lugar caminando hasta él, guardando el recuerdo con una foto.</p>
+          <div class="chip-row small">
+            <span class="chip">React</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">API REST</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/lopezruizkian-pixel/Locus" target="_blank" rel="noopener" class="project-link">Frontend <span class="arrow">→</span></a>
+            <a href="https://github.com/lopezruizkian-pixel/locus-api" target="_blank" rel="noopener" class="project-link">API <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-index">03</div>
+        <div class="project-body">
+          <h3>AuraSkill</h3>
+          <p class="project-role">Plataforma de mentorías en tiempo real</p>
+          <p class="project-desc">Plataforma donde los usuarios pueden buscar mentores en distintos temas, de software o
+            generales. La premisa central es que un alumno pueda tomar clases con profesores en tiempo real usando
+            WebSockets.</p>
+          <div class="chip-row small">
+            <span class="chip">WebSockets</span><span class="chip">Java</span><span class="chip">Javalin</span><span class="chip">React</span>
+          </div>
+          <a href="https://github.com/lopezruizkian-pixel/auraskills" target="_blank" rel="noopener" class="project-link">Ver repositorio <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-index">04</div>
+        <div class="project-body">
+          <h3>Q-LIT</h3>
+          <p class="project-role">Práctica segura de SQL</p>
+          <p class="project-desc">Software para practicar enunciados y tareas de SQL de forma segura, evitando el
+            copy-paste, para forzar que el usuario realmente escriba y entienda las consultas.</p>
+          <div class="chip-row small">
+            <span class="chip">SQL</span><span class="chip">MySQL</span><span class="chip">PostgreSQL</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/YasMcs/Q-LIT-Frontend" target="_blank" rel="noopener" class="project-link">Frontend <span class="arrow">→</span></a>
+            <a href="https://github.com/YasMcs/Q-LIT-backend" target="_blank" rel="noopener" class="project-link">Backend <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section contact-section">
+    <p class="eyebrow reveal"><span class="line-no"></span> contacto.sh</p>
+    <h2 class="section-title reveal">Hablemos</h2>
+    <div class="terminal reveal">
+      <div class="terminal-top">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">kian@portfolio: ~</span>
+      </div>
+      <div class="terminal-body">
+        <p><span class="prompt">$</span> cat contacto.txt</p>
+        <p class="tline">nombre: <span class="tval">Kian López Ruiz</span></p>
+        <p class="tline">correo: <a class="tval tlink" href="mailto:kialorui@gmail.com">kialorui@gmail.com</a></p>
+        <p class="tline">telefono: <a class="tval tlink" href="tel:+529616677999">961 667 7999</a></p>
+        <p class="tline">github: <a class="tval tlink" href="https://github.com/lopezruizkian-pixel" target="_blank" rel="noopener">github.com/lopezruizkian-pixel</a></p>
+        <p><span class="prompt">$</span> <span class="typed-cursor">|</span></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer reveal">
+    <p>Diseñado y construido por Kian López Ruiz — © 2026</p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
